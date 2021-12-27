@@ -12,3 +12,5 @@ services:
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "MySuperSecurePassword1!"
+    ports:
+      - "1433:1433"

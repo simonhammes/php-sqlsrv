@@ -1,0 +1,15 @@
+name: CI
+
+on: push
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: docker-compose up --build -d
+        run : docker-compose up --build -d
+      - name: Wait for SQL Server
+        run: ./bin/wait-for-it.sh localhost:1433 -t 30 --strict -- echo "SQL Server is up!"
+      - name: Run
+        run: curl localhost:80
