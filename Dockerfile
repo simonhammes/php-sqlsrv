@@ -1,4 +1,4 @@
-FROM php:7.4-apache-buster
+FROM php:8.1.2-apache-buster
 
 ENV ACCEPT_EULA="Y"
 
