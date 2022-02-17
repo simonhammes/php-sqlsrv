@@ -11,10 +11,7 @@ RUN apt-get -y update \
     && rm multiarch-support-dummy*.* \
     && apt-get -y purge equivs \
     && apt-get -y autoremove \
-    && apt-get clean \
-    && curl -sSLf -o /etc/apt/trusted.gpg.d/microsoft.asc https://packages.microsoft.com/keys/microsoft.asc \
-    && curl -sSLf -o /etc/apt/sources.list.d/mssql-release-10.list https://packages.microsoft.com/config/debian/10/prod.list \
-    && apt-get -y update
+    && apt-get clean
 
 RUN apt-get update && \
     apt-get install -y gnupg && \
