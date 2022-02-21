@@ -1,6 +1,6 @@
 <?php
 
-$connection = sqlsrv_connect('db', ['Database' => 'master', 'UID' => 'sa', 'PWD' => 'MySuperSecurePassword1!']);
+$connection = sqlsrv_connect('db', ['Database' => 'master', 'UID' => 'sa', 'PWD' => 'MySuperSecurePassword1!', 'TrustServerCertificate' => true]);
 
 var_dump( sqlsrv_errors() );
 
