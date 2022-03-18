@@ -1,4 +1,4 @@
-FROM php:7.4-apache-bullseye
+FROM php:8.1.0-apache-bullseye
 
 ENV ACCEPT_EULA="Y"
 
