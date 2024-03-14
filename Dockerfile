@@ -11,7 +11,7 @@ RUN apt-get update -y || true && \
     # TODO: Remove workaround
     # sed -i 's/ signed-by=\/usr\/share\/keyrings\/microsoft-prod.gpg//g' /etc/apt/sources.list.d/mssql-release.list && \
     apt-get install -y msodbcsql18 unixodbc-dev && \
-    pecl install sqlsrv-5.10.0 && \
+    pecl install sqlsrv-5.12.0 && \
     docker-php-ext-enable sqlsrv
 
 RUN php -m
