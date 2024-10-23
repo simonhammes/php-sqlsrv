@@ -4,7 +4,7 @@ services:
   php:
     build: .
     ports:
-      - "80:80"
+      - "127.0.0.1:80:80"
     volumes:
       - ./public:/var/www/html
   db:
@@ -13,4 +13,4 @@ services:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "MySuperSecurePassword1!"
     ports:
-      - "1433:1433"
+      - "127.0.0.1:1433:1433"
